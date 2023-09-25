@@ -1,0 +1,37 @@
+version: '3'
+services:
+  frontend:
+    build: frontend
+    ports:
+      - 3000:3000
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - ./frontend:/app
+
+  backend:
+    build: backend
+    ports:
+      - 5000:5000
+    environment:
+      - NODE_ENV=development
+      - MONGO_USERNAME=lofai
+      - MONGO_PASSWORD=whiki1ius
+    volumes:
+      - ./backend:/app
+    depends_on:
+      - database
+
+  database:
+    image: mongo
+    ports:
+      - 27017:27017
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=lofai
+      - MONGO_INITDB_ROOT_PASSWORD=whiki1ius
+    volumes:
+      - ./data:/var/lib/mongodb/data/db
+
+volumes:
+  db:
+    driver: local
