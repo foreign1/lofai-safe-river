@@ -5,6 +5,22 @@ Lofai is a platform that simplifies the process of finding the best local tailor
 
 ---
 
+## Table of Contents
+- [Project Overview](#project-overview)
+- [Getting Started](#getting-started)
+  - [Quickstart](#quickstart)
+  - [Prerequisites](#prerequisites)
+  - [Setting Up SSH Keys](#setting-up-ssh-keys)
+  - [Using the Automation Script](#using-the-automation-script)
+- [Manual Setup](#manual-setup)
+- [Running the Project](#running-the-project)
+- [Conventions](#conventions)
+  - [Ticket Types and Naming Conventions](#ticket-types-and-naming-conventions)
+  - [Branch Naming Conventions](#branch-naming-conventions)
+  - [Pull Request (PR) Process](#pull-request-pr-process)
+  - [Ticket Colors](#ticket-colors)
+- [License](#license)
+
 ## Project Overview
 
 This project is divided into three main components:
@@ -108,22 +124,22 @@ Please note that you may need to grant administrative privileges (on Windows) or
 Happy coding!
 
 ---
-**Manual Setup**
+### Manual Setup
 
 If you experience issues using the automation scripts above, you can manually setup the project with the instructions given below
 
 1. **Clone the Project**:
    - Clone the project repository from GitHub:
      ```
-     git clone https://github.com/foreign1/lofai-safe-river
+     git clone git@github.com:Lofai-Inc/chrome_hart.git
      cd lofai-safe-river
      ```
 
 2. **Clone Frontend and Backend Repositories**:
    - Clone the frontend and backend repositories:
      ```
-     git clone https://github.com/foreign1/lofai-FE frontend
-     git clone https://github.com/foreign1/lofai-BE backend
+     git clone git@github.com:Lofai-Inc/chrome_hart-FE.git frontend
+     git clone git@github.com:Lofai-Inc/chrome_hart-BE.git backend
      ```
 
 3. **Create the Data Folder**:
