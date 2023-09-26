@@ -17,6 +17,101 @@ This project is divided into three main components:
 
 To contribute to this project, follow these steps:
 
+### Quickstart
+
+To streamline the setup process of this project, we provide an automation script that simplifies the initialization of the development environment. This script is designed to work seamlessly on Windows, macOS, and Linux.
+
+### Prerequisites
+
+Before running the script, please ensure that you have the following prerequisites installed on your system:
+
+- Git: [Download Git](https://git-scm.com/downloads)
+- Node.js and npm: [Download Node.js](https://nodejs.org/)
+- Docker Desktop (for Windows and macOS): [Download Docker Desktop](https://www.docker.com/products/docker-desktop)
+- SSH Key Pair (if using SSH for repository access): Follow the instructions below to set up SSH keys if not already configured.
+
+### Setting Up SSH Keys
+
+If you haven't set up SSH keys on your computer, follow these steps:
+
+1. **Generate SSH Key Pair**:
+   - Open your terminal or command prompt.
+   - Run the following command, replacing `<your_email@example.com>` with your email address:
+
+     ```bash
+     ssh-keygen -t ed25519 -C "your_email@example.com"
+     ```
+
+   - Follow the prompts to generate your SSH key pair. The default location for the SSH key files is usually `~/.ssh/id_ed25519` on Unix-based systems.
+
+2. **Add SSH Key to SSH Agent**:
+   - Run the following command to add your SSH key to the SSH agent:
+
+     ```bash
+     eval "$(ssh-agent -s)"
+     ssh-add ~/.ssh/id_ed25519
+     ```
+
+   - Replace `~/.ssh/id_ed25519` with the path to your SSH private key if it's located elsewhere.
+
+3. **Copy and Add SSH Public Key**:
+   - Run the following command to copy your SSH public key to your clipboard:
+
+     ```bash
+     cat ~/.ssh/id_ed25519.pub | pbcopy
+     ```
+
+   - Now, add the copied SSH public key to your GitHub account or any other version control service you use.
+
+### Using the Automation Script
+
+Follow these steps to set up the project with the automation script:
+
+1. **Clone the Project**:
+   - Open your terminal or command prompt.
+   - Navigate to the directory where you want to clone the project.
+   - Run the following command to clone the project repository:
+
+     ```bash
+     git clone git@github.com:Lofai-Inc/chrome_hart.git
+     ```
+
+2. **Run the Setup Script**:
+   - Navigate to the project's root directory:
+
+     ```bash
+     cd chrome_hart
+     ```
+
+   - Execute the appropriate setup script based on your operating system:
+     - On Windows, run `setup.bat`.
+     - On macOS or Linux, run:
+        ```bash
+        chmod +x setup.sh
+        ```
+  
+         - run the script by executing it in the terminal
+        ```bash
+        ./setup.sh
+        ```
+   - The script will guide you through the setup process, cloning the frontend and backend repositories, installing dependencies, and starting Docker Compose.
+
+3. **Start Docker Desktop** (Windows, macOS, and Linux):
+   - Ensure that Docker Desktop is installed and running on your system before starting the script.
+   - The script will prompt you to start Docker Desktop after the initial setup.
+
+4. **Enjoy Developing!**:
+   - Once the script completes, you're all set to start developing. You can begin working on the project's frontend and backend components.
+
+Please note that you may need to grant administrative privileges (on Windows) or make the script executable (on macOS and Linux) before running it. If you encounter any issues during the setup process, feel free to reach out for assistance.
+
+Happy coding!
+
+---
+**Manual Setup**
+
+If you experience issues using the automation scripts above, you can manually setup the project with the instructions given below
+
 1. **Clone the Project**:
    - Clone the project repository from GitHub:
      ```
